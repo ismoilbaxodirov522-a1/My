@@ -1,1 +1,99 @@
-index.hrm
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Reklama</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.10);
+            padding: 40px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 320px;
+            animation: fadeIn 1.4s ease;
+            box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .card img {
+            width: 120px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            animation: pop 1.2s ease;
+        }
+
+        h1 {
+            font-weight: 600;
+            margin: 15px 0 5px;
+        }
+
+        p {
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: white;
+            color: #d6249f;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+            animation: rise 1.5s ease;
+        }
+
+        .btn:hover {
+            background: #ffe6f7;
+            transform: scale(1.08);
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(30px);}
+            to   {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes pop {
+            0% {transform: scale(0.5); opacity: 0;}
+            100% {transform: scale(1); opacity: 1;}
+        }
+
+        @keyframes rise {
+            from {opacity: 0; transform: translateY(20px);}
+            to   {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Sample_User_Icon.png/600px-Sample_User_Icon.png" alt="Profil rasmi">
+
+        <h1>Instagram Profilim</h1>
+        <p>Mening sahifamga obuna bo‘ling va yangiliklarni kuzatib boring!</p>
+
+        <!-- SHU YERGA INSTAGRAM USERNAME YOZASIZ -->
+        <a href="https://instagram.com/elektro_uz_" class="btn" target="_blank">Profilga o‘tish</a>
+    </div>
+
+</body>
+</html>
