@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Animated Instagram Banner</title>
+<style>
+    body {
+        margin: 0;
+        background: #0d0d0d;
+        font-family: Arial, sans-serif;
+    }.banner-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Glow animated circles */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,0,102,0.7), rgba(255,0,102,0));
+    animation: float 6s infinite alternate ease-in-out;
+}
+
+.circle:nth-child(1) {
+    width: 220px;
+    height: 220px;
+    top: -40px;
+    left: -30px;
+    animation-duration: 8s;
+}
+
+.circle:nth-child(2) {
+    width: 180px;
+    height: 180px;
+    bottom: -30px;
+    right: 10px;
+    animation-duration: 5s;
+    background: radial-gradient(circle, rgba(255,188,0,0.7), rgba(255,188,0,0));
+}
+
+@keyframes float {
+    to { transform: translateY(40px) translateX(20px) scale(1.1); }
+}
+
+/* Main banner card */
+.banner {
+    width: 90%;
+    max-width: 780px;
+    height: 160px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255,0,102,0.4);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: slideUp 1.2s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.logo {
+    width: 130px;
+    height: 130px;
+    border-radius: 25px;
+    overflow: hidden;
+    animation: rotateIn 2.5s ease-in-out;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rotateIn {
+    0% { transform: rotate(-180deg) scale(0.5); opacity: 0; }
+    100% { transform: rotate(0deg) scale(1); opacity: 1; }
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.text-block h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.text-block p {
+    color: #bbbbbb;
+    margin-top: 6px;
+    font-size: 16px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.btn {
+    margin-left: auto;
+    padding: 12px 22px;
+    background: linear-gradient(45deg, #ff0066, #ffbb00);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    animation: fadeIn 2.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 15px rgba(255,0,102,0.5);
+}
+
+</style>
+</head>
+<body><div class="banner-container">
+    <div class="circle"></div>
+    <div class="circle"></div><div class="banner">
+    <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    </div>
+
+    <div class="text-block">
+        <h1>⚡ Elektro_Uz</h1>
+        <p>Elektrik xizmatlari — sifatli, tez va kafolatli!</p>
+    </div>
+
+    <a href="https://www.instagram.com/elektro_uz_" target="_blank" class="btn">Ko‘rish →</a>
+</div>
+
+</div></body>
+</html>
